@@ -1,0 +1,471 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --cor-padrao: #00107d;
+    --cor-padrao-hover: #5e1653;
+    --cor-fonte: #fff;
+    --cor-fonte-p: #555;
+    --cor-btn: #5e1653;
+    --cor-btn-hover: #ad2198;
+    --cor-btn-fonte: #000;
+    --cor-fonte-corpo: #555;
+    --cor-fonte-corpo-leve: #777;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+/* Estilos de cabeçalhos */
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+h2, h3 {
+    font-weight: 800;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Fundo do site */
+.background-site {
+    background: radial-gradient(var(--cor-btn-hover), var(--cor-padrao));
+}
+
+/* Logo dos Primos */
+.primos-logo img {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    margin-left: 10px;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    z-index: 1001;
+}
+
+/* Estilos da sacola de compras */
+.sacola {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    z-index: 1001;
+    border-radius: 16px;
+}
+
+.sacola button {
+    padding: 5px;
+    border-radius: 16px;
+}
+
+#sacola-count {
+    background-color: var(--cor-btn);
+    color: var(--cor-fonte);
+    border-radius: 16px;
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: top 0.5s;
+    backdrop-filter: blur(8px) brightness(1.2);
+    -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Barra de navegação */
+.navbar {
+    padding-top: 15px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list {
+    display: flex;
+    margin-right: 30px;
+    padding-bottom: 20px;
+}
+
+.list li {
+    margin-left: 20px;
+}
+
+.list a {
+    color: var(--cor-fonte);
+    text-decoration: none;
+}
+
+/* Navbar ao rolar a página */
+.navbar.hidden {
+    position: absolute;
+    top: 0;
+    transition: all 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 0;
+    z-index: 0;
+}
+
+.navbar.hidden .logo {
+    padding: 0 0;
+}
+
+/* Janela pop-up */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #5e1653;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1002;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h3 {
+    margin-bottom: 20px;
+}
+
+.popup-content ul {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.popup-content ul li {
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5e1653;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup-content button + button {
+    margin-left: 10px;
+}
+
+.popup-content button:hover {
+    background-color: #ad2198;
+}
+
+/* Estilos para o banner */
+button {
+    background-color: var(--cor-btn);
+    color: var(--cor-fonte);
+    border: 10px;
+    padding: 20px 40px;
+    border-radius: 16px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+button a {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--cor-btn-hover);
+    color: var(--cor-btn-fonte);
+    transition: all .3s cubic-bezier(0,0,.5,1);
+}
+
+#banner {
+    display: flex;
+    color: var(--cor-fonte);
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    margin-left: 40px;
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+/* Seção de novidades */
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-hidden {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.news-product {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    max-width: 300px;
+    transition: transform 0.5s ease;
+}
+
+.news-product:hover {
+    transform: translateY(-5px);
+}
+
+.news-product img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--cor-btn);
+    color: var(--cor-fonte);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 30px;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 2px;
+}
+
+.carousel-button.next {
+    right: 2px;
+}
+
+/* Estilos para os produtos */
+.product-list, .promotion-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#products, #promotions, #news {
+    text-align: center;
+}
+
+.product {
+    max-width: 300px;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+#products h2, #promotions h2, #news h2 {
+    margin: 30px;
+    font-size: 25px;
+    color: var(--cor-fonte);
+}
+
+.product h3, .news-product h3, #promotions h3 {
+    font-size: 18px;
+    color: var(--cor-btn-fonte);
+}
+
+.product p, .news-product p, #promotions p {
+    font-size: 14px;
+    color: var(--cor-fonte-p);
+    margin-bottom: 5px;
+}
+
+.product button {
+    border-radius: 16px;
+    width: 100%;
+}
+
+.product .preco {
+    font-size: 16px;
+}
+
+/* Rodapé */
+#footer {
+    margin-top: 50px;
+}
+
+#footer .footer-content {
+    color: var(--cor-fonte);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#footer .footer-section {
+    flex: 1;
+    margin-bottom: 50px;
+    margin: 50px;
+}
+
+#footer a {
+    color: var(--cor-fonte);
+}
+
+#footer .footer-bottom {
+    text-align: center;
+    background-color: var(--cor-btn-hover);
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+/* Media queries para melhorar a responsividade dos produtos */
+@media only screen and (max-width: 768px) {
+    .product {
+        max-width: calc(50% - 20px); /* Define a largura para ocupar metade da largura da tela com margem entre os produtos */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product {
+        max-width: calc(100% - 20px); /* Define a largura para ocupar toda a largura da tela com margem entre os produtos */
+    }
+}
+
+/* Media queries para tornar o site responsivo */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        justify-content: center; /* Centraliza os itens da barra de navegação */
+        padding-top: 0;
+        padding-right: 0;        
+    }
+
+    .list {
+        margin-right: 0;
+    }
+
+    .list li {
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .sacola {
+        top: 5px;
+        right: 5px;
+    }
+
+    .popup-container {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-slide {
+        flex: 0 0 100%; /* Define a largura dos slides para ocupar toda a largura da tela */
+    }
+    
+    .carousel-slide:not(.current-slide) {
+            visibility: hidden; /* Esconde os slides que não são o slide atual */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 36px; /* Reduz o tamanho do título principal */
+    }
+
+    .container {
+        padding: 10px 0; /* Reduz o espaço interno do container */
+    }
+
+    .background-site {
+        padding-top: 80px; /* Aumenta o espaço superior do fundo do site */
+    }
+
+    .navbar {
+        padding-top: 10px; /* Ajusta o espaço superior da barra de navegação */
+        padding-right: 20px; /* Ajusta o espaço direito da barra de navegação */
+    }
+
+    .list li {
+        margin-left: 10px; /* Ajusta a margem esquerda dos itens da lista */
+    }
+
+    .sacola {
+        top: 2px; /* Ajusta a posição vertical da sacola */
+        right: 2px; /* Ajusta a posição horizontal da sacola */
+    }
+
+    .carousel-slide {
+        flex: 0 0 100%; /* Define a largura dos slides para ocupar toda a largura da tela */
+    }
+
+    .carousel-slide:nth-child(n+2) {
+        display: block; /* Garante que todos os slides sejam exibidos */
+    }
+}

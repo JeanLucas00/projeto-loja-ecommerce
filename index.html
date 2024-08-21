@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets\img\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Loja E-commerce</title>
+</head>
+<body>
+
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-content">
+           Itens no Carrinho</h3>
+            <ul id="cartItemsList">
+                <!-- Aqui serão adicionados os itens do carrinho dinamicamente via JavaScript -->
+            </ul>
+            <button id="clearCartButton">Limpar Carrinho</button>
+            <button id="closePopupButton">Fechar</button>
+        </div>
+    </div>
+
+    <div class="background-site">
+        <!-- INICIO CONTAINER -->
+        <div class="container">
+            <div class="primos-logo">
+                <img src="assets/img/logo.png" alt="Los Primos Hookah" width="70px" alt="Logo">
+            </div>
+            <div class="sacola">
+                <button><img src="assets/img/carrinho.png" alt="Sacola" width="40px"></button>
+                <span id="sacola-count">0</span>
+            </div>
+            <header  class="navbar" id="navbar">
+                <nav class="navbar">
+                    <ul class="list">
+                        <li><a href="#products">Produtos</a></li>
+                        <li><a href="#promotions">Promoções</a></li>
+                        <li><a href="#footer">Contatos</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- FIM NAVEGAÇÃO -->
+
+            <!-- INICIO BANNER -->
+            <div id="banner">
+                <div class="col-2">
+                    <h1>Bem,<br>Vindos!</h1>
+                    <button><a href="#news">Conheça as Novidades</a></button>
+                </div>
+            </div>
+            <!-- FIM BANNER -->
+
+            <!-- INICIO SEÇÃO DE PROMOÇÕES -->
+            <section id="promotions">
+                <h2>Promoções em Destaque</h2>
+                <div class="promotion-list">
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/promocao1.jpg" alt="Promoção 1">
+                        <h3>Promoção 1</h3>
+                        <p class="description">Detalhes da Promoção 1</p>
+                        <p class="price-products">De R$ 199,99 por R$ 99,99</p>
+                        <button class="add-to-cart">Aproveitar</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/promocao2.jpg" alt="Promoção 2">
+                        <h3>Promoção 2</h3>
+                        <p class="description">Detalhes da Promoção 2</p>
+                        <p class="price-products">De R$ 249,99 por R$ 149,99</p>
+                        <button class="add-to-cart">Aproveitar</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/promocao3.jpg" alt="Promoção 3">
+                        <h3>Promoção 3</h3>
+                        <p class="description">Detalhes da Promoção 3</p>
+                        <p class="price-products">De R$ 249,99 por R$ 149,99</p>
+                        <button class="add-to-cart">Aproveitar</button>
+                    </div>                    
+                </div>
+            </section>
+            <!-- FIM SEÇÃO DE PROMOÇÕES -->
+
+             <!-- INICIO SEÇÃO DE PRODUTOS -->
+            <section id="products">
+                <h2>Nossos Produtos</h2>
+                <div class="product-list">
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto1.jpg" alt="Produto 1">
+                        <h3>Produto 1</h3>
+                        <p class="description">Descrição do Produto 1</p>
+                        <p class="price-products">R$ 99,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto2.jpg" alt="Produto 2">
+                        <h3>Produto 2</h3>
+                        <p class="description">Descrição do Produto 2</p>
+                        <p class="price-products">R$ 99,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto3.jpg" alt="Produto 3">
+                        <h3>Produto 3</h3>
+                        <p class="description">Descrição do Produto 3</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto4.jpg" alt="Produto 4">
+                        <h3>Produto 4</h3>
+                        <p class="description">Descrição do Produto 4</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto5.jpg" alt="Produto 5">
+                        <h3>Produto 5</h3>
+                        <p class="description">Descrição do Produto 5</p>
+                        <p class="price-products">R$ 99,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto6.jpg" alt="Produto 6">
+                        <h3>Produto 6</h3>
+                        <p>Descrição do Produto 6</p>
+                        <p class="price-products">R$ 99,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto7.jpg" alt="Produto 7">
+                        <h3>Produto 7</h3>
+                        <p class="description">Descrição do Produto 7</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto8.jpg" alt="Produto 8">
+                        <h3>Produto 8</h3>
+                        <p class="description">Descrição do Produto 8</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto9.jpg" alt="Produto 9">
+                        <h3>Produto 9</h3>
+                        <p class="description">Descrição do Produto 9</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto10.jpg" alt="Produto 10">
+                        <h3>Produto 10</h3>
+                        <p class="description">Descrição do Produto 10</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto11.jpg" alt="Produto 11">
+                        <h3>Produto 11</h3>
+                        <p class="description">Descrição do Produto 11</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="product" data-id="name-products">
+                        <img src="assets/img/produto12.jpg" alt="Produto 12">
+                        <h3>Produto 12</h3>
+                        <p class="description">Descrição do Produto 12</p>
+                        <p class="price-products">R$ 149,99</p>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                    <!-- Adicione mais produtos conforme necessário -->
+                </div>
+            </section>          
+            <!-- FIM SEÇÃO DE PRODUTOS -->
+            
+            <!--SESSÃO DE NOVIDADES-->
+            <div id="news">
+                <h2>Novidades</h2>
+                <div class="carousel">
+                    <button class="carousel-button prev">⟨</button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide current-slide">         
+                                <div class="news-product">
+                                    <img src="assets/img/news-product1.jpg" alt="Novidades 1">
+                                    <h3>Novidade 1</h3>
+                                    <p class="description">Descrição do Produto 1</p>
+                                    <p class="price-products">R$ 99,99</p>
+                                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                                </div>
+                                <div class="news-product">
+                                    <img src="assets/img/news-product2.jpg" alt="Novidades 2">
+                                    <h3>Novidade 2</h3>
+                                    <p class="description">Descrição do Produto 2</p>
+                                    <p class="price-products">R$ 99,99</p>
+                                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                                </div>
+                                <div class="news-product">
+                                    <img src="assets/img/news-product3.jpg" alt="Novidades 3">
+                                    <h3>Novidade 3</h3>
+                                    <p class="description">Descrição do Produto 3</p>
+                                    <p class="price-products">R$ 99,99</p>
+                                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                                </div>
+                            </li>
+                            <li class="carousel-slide carousel-hidden">
+                                <div class="news-product">
+                                    <img src="assets/img/news-product4.jpg" alt="Novidades 4">
+                                    <h3>Novidade 4</h3>
+                                    <p class="description">Descrição do Produto 4</p>
+                                    <p class="price-products">R$ 99,99</p>
+                                    <button class="add-to-cart">Adicionar ao Carrinho</button>        
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-button next">⟩</button>
+                </div>                
+            </div>
+        </div>            
+
+
+            <!-- INICIO RODAPÉ -->
+            <footer id="footer">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                       Sobre Nós</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.</p>
+                    </div>
+                    <div class="footer-section links">
+                       Links Rápidos</h3>
+                        <ul>
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#products">Produtos</a></li>
+                            <li><a href="#promotions">Promoções</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact">
+                       Contato</h3>
+                        <p>Email: contato@ecommerce.com</p>
+                        <p>Telefone: (11) 1234-5678</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Jean Santos. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+            <!-- FIM RODAPÉ -->
+        </div>
+    </div>    
+<script src="assets/js/app.js"></script>
+</body>
+</html>
