@@ -51,8 +51,8 @@ h2, h3 {
     background: radial-gradient(var(--cor-btn-hover), var(--cor-padrao));
 }
 
-/* Logo dos Primos */
-.primos-logo img {
+/* Logo */
+.logo img {
     display: flex;
     align-items: center;
     border-radius: 16px;
